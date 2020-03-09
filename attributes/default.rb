@@ -4,7 +4,7 @@ default['livy']['user']                    = node['install']['user'].empty? ? "l
 default['livy']['group']                   = node['install']['user'].empty? ? node['hadoop_spark']['group'] : node['install']['user']
 
 default['livy']['version']                 = "0.6.1.2-bin"
-default['livy']['url']                     = "#{node['download_url']}/apache-livy-#{node['livy']['version']}.zip"
+default['livy']['url']                     = "#{node['download_url']}/apache-livy-#{node['livy']['version']}-hadoop3.zip"
 default['livy']['port']                    = "8998"
 default['livy']['dir']                     = node['install']['dir'].empty? ? "/srv" : node['install']['dir']
 default['livy']['home']                    = node['livy']['dir'] + "/apache-livy-" + node['livy']['version']
